@@ -3,10 +3,10 @@ This project tries to recommend articles to user's based on their previous inter
 
 ## Dependencies
 This project requires Python 3.x and the following Python libraries installed:
-  - Nltk
-  - Pandas
-  - Progressbar
-  - Seaborn
+  - nltk
+  - pandas
+  - progressbar
+  - seaborn
   - scikit-learn
 ## Data
 The data is provided by IBM and includes anonymized cleaned data of user-article interactions.
