@@ -15964,8 +15964,9 @@ For new users, we can ask them for their preferences and based on these preferen
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>It can be found clearly that as the number of latent features increases the model overfits. So we can strike a balance of about 100 latent features after which both the curves somewhat flatten out.
-We can target two groups a control group and a target group and measure the number of articles visited by the users and see if there is a significance difference.</p>
+<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>It can be found clearly that as the number of latent features increases the model overfits. So we can strike a balance of about 100 latent features after which both the curves somewhat flatten out. Concluding on this, we can say that accuracy is not proper, since the predicted inetractions is imbalanced between users and articles.<br>
+We have used colloborative filtering and SVD for recommendations. However both of these techiniques suffer from the cold start problem. In our dataset a very small fraction of the user have history of old interactions with the articles. This leads to the cold start problem in the recommendation techniques used.To solve the cold-start problem, Rank or Knowledge based recommendation method can be useful. Also content based recommendation can be handy for users with fewer interactions.<br>
+We can target two groups a control group and a target group and measure the number of articles visited by the users and see if there is a significance difference. So an A/B Test can be used to select the between the method to be used for model and can improve on it. The diversion unit can be selected such that the recommendations are shown to random people thereby eliminating  any bias in the experiment. Metrics from both the groups can be compared and if there is enough statistical and practical significance then the recommendation can be pushed to the production. Recommendated and Control groups tests can be observed for further analysis.</p>
 
 </div>
 </div>
@@ -15988,11 +15989,44 @@ We can target two groups a control group and a target group and measure the numb
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">subprocess</span> <span class="k">import</span> <span class="n">call</span>
 <span class="n">call</span><span class="p">([</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;-m&#39;</span><span class="p">,</span> <span class="s1">&#39;nbconvert&#39;</span><span class="p">,</span> <span class="s1">&#39;Recommendations_with_IBM.ipynb&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[93]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
